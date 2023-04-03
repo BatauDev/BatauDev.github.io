@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Batau Software Dev - Chatbot</title>
+    <style>
+      body {
+        background-color: #2C2F33;
+        color: #FFFFFF;
+        font-family: Arial, sans-serif;
+      }
+      #container {
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      h1 {
+        font-size: 36px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+      #chatbox {
+        height: 400px;
+        overflow-y: scroll;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #23272A;
+        border-radius: 5px;
+        text-align: left;
+      }
+      .user {
+        color: #58C9B9;
+      }
+      .bot {
+        color: #E0E0E0;
+      }
+      input[type=text] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        background-color: #23272A;
+        border-radius: 5px;
+        color: #FFFFFF;
+        font-size: 16px;
+      }
+      input[type=submit] {
+        background-color: #58C9B9;
+        color: #FFFFFF;
+        border: none;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Batau Software Dev - Chatbot</h1>
+      <div id="chatbox"></div>
+      <form id="userinput">
+        <input type="text" id="usermsg" placeholder="Type your message here...">
+        <input type="submit" value="Send">
+      </form>
+    </div>
+    <script>
+      var chatbox = document.getElementById("chatbox");
+      var userinput = document.getElementById("userinput");
+      var usermsg = document.getElementById("usermsg");
+      var messages = [];
+      var botResponses = [
+        "I'm sorry, I don't understand.",
+        "Could you rephrase your question?",
+        "I'm not sure what you're asking.",
+        "That's a great question. I'm not sure of the answer.",
+        "I'm afraid I can't help you with that.",
+        "I'm not programmed to answer that.",
+        "I'm sorry, I don't have that information.",
+        "I'm not sure. Would you like me to look that up for you?",
+        "I'm sorry, I'm not qualified to answer that.",
+        "I'm afraid I don't know the answer to that question."
+      ];
+      function botResponse() {
+        var response = botResponses[Math.floor(Math.random()*botResponses.length)];
+        return response;
+      }
+      function getUserInput() {
+        var userInput = usermsg.value.trim();
+        messages.push("<span class='user'>" + userInput + "</span>");
+        chatbox.innerHTML
