@@ -15,24 +15,66 @@
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
+    <style>
+        /* Custom Styles for Navigation */
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 2em;
+            background-color: #333;
+            color: #fff;
+        }
+
+        #nav {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #nav li {
+            margin-right: 1.5em;
+        }
+
+        #nav li:last-child {
+            margin-right: 0;
+        }
+
+        #nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        #nav a:hover {
+            color: #888;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
     <!-- Wrapper -->
     <div id="wrapper" class="fade-in">
 
-        <!-- Main -->
-        <div id="main">
+        <!-- Header -->
+        <header id="header">
             <h1 style="text-align: center;">Claim Rewards</h1>
-            
+
+            <!-- Navigation -->
             <nav id="nav">
-                <ul class="links">
+                <ul>
                     <li class="active"><a href="index.html">Batau Software Dev</a></li>
                     <li><a href="generic.html">News & Updates</a></li>
                     <li><a href="rewards.html">Claim Rewards</a></li>
                 </ul>
             </nav>
+        </header>
 
+        <!-- Main -->
+        <div id="main">
             <article class="thumb">
                 <h3>Heading 1</h3>
                 <a href="images/pic06.png" class="image">
