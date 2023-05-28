@@ -19,7 +19,8 @@
         /* Custom Styles for Navigation */
         #header {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
             padding: 1em 2em;
             background-color: #333;
@@ -61,11 +62,11 @@
 
         <!-- Header -->
         <header id="header">
-            <h1 style="text-align: center;">Claim Rewards</h1>
+            <h1>Claim Rewards</h1>
 
             <!-- Navigation -->
             <nav id="nav">
-                <ul>
+                <ul class="links">
                     <li class="active"><a href="index.html">Batau Software Dev</a></li>
                     <li><a href="generic.html">News & Updates</a></li>
                     <li><a href="rewards.html">Claim Rewards</a></li>
